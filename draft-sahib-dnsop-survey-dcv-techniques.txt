@@ -6,6 +6,10 @@ Network Working Group                                           S. Sahib
 Internet-Draft                                            Brave Software
 Intended status: Informational                                  S. Huque
 Expires: 7 January 2027                                       Salesforce
+                                                               E. Nygren
+                                                     Akamai Technologies
+                                                             T. Wicinski
+                                                      Cox Communications
                                                              6 July 2026
 
 
@@ -19,9 +23,7 @@ Abstract
    domain, a process generally referred to as "Domain Control
    Validation".  This document is a companion survey that catalogs the
    DNS-based Domain Control Validation techniques in use today across a
-   range of Application Service Providers and protocols.  This material
-   was originally developed as part of that document and is published
-   separately for reference.
+   range of Application Service Providers and protocols.
 
 Discussion Venues
 
@@ -125,23 +127,11 @@ Table of Contents
 
 2.  Conventions and Definitions
 
-   This document uses the following terms:
-
-   Application Service Provider:  The entity that requires proof that a
-      User controls a domain before providing a service for that domain.
-
-   User:  The entity that requests a service from an Application Service
-      Provider and that has (direct or delegated) access to the DNS
-      records for the domain being validated.
-
-   Validation Record:  The DNS record that the User adds to the domain
-      in order to prove control of the domain to the Application Service
-      Provider.
-
-   Random Token:  A randomly-generated value provided by the Application
-      Service Provider and included in the Validation Record so as to
-      prove that the User who requested that the domain be verified is
-      the one who has access to the DNS records for the domain.
+   This document uses the terminology defined in the "Conventions and
+   Definitions" section of
+   [I-D.draft-ietf-dnsop-domain-verification-techniques], including
+   "Application Service Provider", "DNS Administrator", "User", "Unique
+   Token", and "Validation Record".
 
 3.  TXT based
 
@@ -168,7 +158,7 @@ Table of Contents
    TXT records used for domain control validation, and they often do not
    follow the key-value pair model.  Even so, the RDATA [RFC1034]
    portion of the DNS TXT record has to contain the value being used to
-   verify the domain.  The value is usually a Random Token in order to
+   verify the domain.  The value is usually a Unique Token in order to
    guarantee that the entity who requested that the domain be verified
    (i.e., the person managing the account at Application Service
    Provider Service) is the one who has (direct or delegated) access to
@@ -188,7 +178,7 @@ Table of Contents
 
 _acme-challenge.example.com.  IN  TXT "cE3A8qQpEzAIYq-T9DWNdLJ1_YRXamdxcjGTbzrOH5L"
 
-   [RFC8555] (Section 8.4) places requirements on the Random Token.
+   [RFC8555] (Section 8.4) places requirements on the Unique Token.
 
 3.1.  Let's Encrypt
 
@@ -259,7 +249,7 @@ _psl.example.com.  IN TXT "https://github.com/publicsuffix/list/pull/100"
    [LETSENCRYPT-DNS01].  Let's Encrypt only issues certs with a 90 day
    validity period for security reasons [LETSENCRYPT-90DAYS].  This
    means that after 90 days, the DNS-01 challenge has to be re-done and
-   the Random Token has to be replaced with a new one.  Doing this
+   the Unique Token has to be replaced with a new one.  Doing this
    manually is error-prone.
 
    Content Delivery Networks offer to automate this process using a
@@ -487,3 +477,13 @@ Authors' Addresses
    Shumon Huque
    Salesforce
    Email: shuque@gmail.com
+
+
+   Erik Nygren
+   Akamai Technologies
+   Email: erik+ietf@nygren.org
+
+
+   Tim Wicinski
+   Cox Communications
+   Email: tjw.ietf@gmail.com
