@@ -274,8 +274,7 @@ _<random-token1>.example.com.  IN   CNAME _<random-token2>.acm-validations.aws.
 
 4.2.3.  Akamai
 
-   Akamai [AKAMAI-DCV] uses a CNAME record pointing to its validation
-   domain:
+   Akamai [AKAMAI-DCV] uses a CNAME record:
 
    _acme-challenge.domain.com. IN CNAME validation.validate-akdv.net.
 
@@ -288,16 +287,15 @@ _<random-token1>.example.com.  IN   CNAME _<random-token2>.acm-validations.aws.
 
 4.2.5.  Fastly
 
-   Fastly [FASTLY-TLS] uses a CNAME record pointing to its validation
-   domain:
+   Fastly [FASTLY-TLS] uses a CNAME record:
 
    _acme-challenge.domain.com. IN CNAME token.fastly-validations.com.
 
 4.2.6.  Cloudflare
 
-   Cloudflare [CLOUDFLARE-DCV] supports delegated DCV (for partial DNS
-   setups) where the customer creates a CNAME record at _acme-
-   challenge.domain.com. pointing to Cloudflare's validation domain.
+   Cloudflare [CLOUDFLARE-DCV] uses a CNAME record at _acme-
+   challenge.domain.com. pointing to a Cloudflare validation target, for
+   partial DNS setups.
 
 4.2.7.  F5 Distributed Cloud
 
@@ -359,12 +357,12 @@ _acme-challenge.domainiwantcertfor.tld. IN  CNAME a097455b-52cc-4569-90c8-7a4b97
 7.2.  Informative References
 
    [ACM-CNAME]
-              Amazon Web Services, "DNS validation - AWS Certificate
-              Manager", n.d.,
+              Amazon Web Services, "AWS Certificate Manager DNS
+              validation", n.d.,
               <https://docs.aws.amazon.com/acm/latest/userguide/dns-
               validation.html>.
 
-   [ACME-DNS] Heiskanen, J., "acme-dns", n.d.,
+   [ACME-DNS] Hoikkala, J., "acme-dns", n.d.,
               <https://github.com/joohoi/acme-dns>.
 
    [AKAMAI-DCV]
@@ -373,7 +371,7 @@ _acme-challenge.domainiwantcertfor.tld. IN  CNAME a097455b-52cc-4569-90c8-7a4b97
               mgr/docs/add-hn-with-default-cert-la>.
 
    [ATPROTO-HANDLE]
-              Bluesky, "Handle Resolution: DNS TXT Method", n.d.,
+              Bluesky, "Handle", n.d.,
               <https://atproto.com/specs/handle#dns-txt-method>.
 
    [CERTIFY-DNS]
@@ -414,16 +412,16 @@ _acme-challenge.domainiwantcertfor.tld. IN  CNAME a097455b-52cc-4569-90c8-7a4b97
               organizations-domain>.
 
    [GOOGLE-CERT-MANAGER]
-              Google, "Deploy a Google-managed certificate with DNS
-              authorization", n.d., <https://cloud.google.com/
+              Google, "Deploy a global Google-managed certificate with
+              DNS authorization", n.d., <https://cloud.google.com/
               certificate-manager/docs/deploy-google-managed-dns-auth>.
 
    [GOOGLE-WORKSPACE-CNAME]
-              Google, "Verify your domain with a CNAME record", n.d.,
+              Google, "CNAME record values", n.d.,
               <https://support.google.com/a/answer/112038>.
 
    [GOOGLE-WORKSPACE-TXT]
-              Google, "Verify your domain with a TXT record", n.d.,
+              Google, "TXT record values", n.d.,
               <https://support.google.com/a/answer/2716802>.
 
    [I-D.draft-ietf-dnsop-domain-verification-techniques]
@@ -440,9 +438,9 @@ _acme-challenge.domainiwantcertfor.tld. IN  CNAME a097455b-52cc-4569-90c8-7a4b97
               <https://letsencrypt.org/2015/11/09/why-90-days.html>.
 
    [LETSENCRYPT-DNS01]
-              Internet Security Research Group (ISRG), "Challenge Types:
-              DNS-01 challenge", n.d., <https://letsencrypt.org/docs/
-              challenge-types/#dns-01-challenge>.
+              Internet Security Research Group (ISRG), "Challenge
+              Types", n.d., <https://letsencrypt.org/docs/challenge-
+              types/#dns-01-challenge>.
 
    [PSL]      Mozilla Foundation, "Public Suffix List", n.d.,
               <https://publicsuffix.org/>.

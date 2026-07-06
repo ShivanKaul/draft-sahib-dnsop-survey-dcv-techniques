@@ -1426,7 +1426,7 @@ _&lt;random-token2&gt;.acm-validations.aws.  IN   TXT "&lt;random-token3&gt;"
           <h4 id="name-akamai">
 <a href="#section-4.2.3" class="section-number selfRef">4.2.3. </a><a href="#name-akamai" class="section-name selfRef">Akamai</a>
           </h4>
-<p id="section-4.2.3-1">Akamai <span>[<a href="#AKAMAI-DCV" class="cite xref">AKAMAI-DCV</a>]</span> uses a CNAME record pointing to its validation domain:<a href="#section-4.2.3-1" class="pilcrow">¶</a></p>
+<p id="section-4.2.3-1">Akamai <span>[<a href="#AKAMAI-DCV" class="cite xref">AKAMAI-DCV</a>]</span> uses a CNAME record:<a href="#section-4.2.3-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.2.3-2">
 <pre>
 _acme-challenge.domain.com. IN CNAME validation.validate-akdv.net.
@@ -1452,7 +1452,7 @@ _dnsauth.example.com. IN CNAME [random_value].dcv.digicert.com.
           <h4 id="name-fastly">
 <a href="#section-4.2.5" class="section-number selfRef">4.2.5. </a><a href="#name-fastly" class="section-name selfRef">Fastly</a>
           </h4>
-<p id="section-4.2.5-1">Fastly <span>[<a href="#FASTLY-TLS" class="cite xref">FASTLY-TLS</a>]</span> uses a CNAME record pointing to its validation domain:<a href="#section-4.2.5-1" class="pilcrow">¶</a></p>
+<p id="section-4.2.5-1">Fastly <span>[<a href="#FASTLY-TLS" class="cite xref">FASTLY-TLS</a>]</span> uses a CNAME record:<a href="#section-4.2.5-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.2.5-2">
 <pre>
 _acme-challenge.domain.com. IN CNAME token.fastly-validations.com.
@@ -1465,7 +1465,7 @@ _acme-challenge.domain.com. IN CNAME token.fastly-validations.com.
           <h4 id="name-cloudflare">
 <a href="#section-4.2.6" class="section-number selfRef">4.2.6. </a><a href="#name-cloudflare" class="section-name selfRef">Cloudflare</a>
           </h4>
-<p id="section-4.2.6-1">Cloudflare <span>[<a href="#CLOUDFLARE-DCV" class="cite xref">CLOUDFLARE-DCV</a>]</span> supports delegated DCV (for partial DNS setups) where the customer creates a CNAME record at <code>_acme-challenge.domain.com.</code> pointing to Cloudflare's validation domain.<a href="#section-4.2.6-1" class="pilcrow">¶</a></p>
+<p id="section-4.2.6-1">Cloudflare <span>[<a href="#CLOUDFLARE-DCV" class="cite xref">CLOUDFLARE-DCV</a>]</span> uses a CNAME record at <code>_acme-challenge.domain.com.</code> pointing to a Cloudflare validation target, for partial DNS setups.<a href="#section-4.2.6-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="f5-distributed-cloud">
@@ -1567,11 +1567,11 @@ _acme-challenge.domainiwantcertfor.tld. IN  CNAME a097455b-52cc-4569-90c8-7a4b97
 <dl class="references">
 <dt id="ACM-CNAME">[ACM-CNAME]</dt>
         <dd>
-<span class="refAuthor">Amazon Web Services</span>, <span class="refTitle">"DNS validation - AWS Certificate Manager"</span>, <span>n.d.</span>, <span>&lt;<a href="https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html">https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html</a>&gt;</span>. </dd>
+<span class="refAuthor">Amazon Web Services</span>, <span class="refTitle">"AWS Certificate Manager DNS validation"</span>, <span>n.d.</span>, <span>&lt;<a href="https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html">https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="ACME-DNS">[ACME-DNS]</dt>
         <dd>
-<span class="refAuthor">Heiskanen, J.</span>, <span class="refTitle">"acme-dns"</span>, <span>n.d.</span>, <span>&lt;<a href="https://github.com/joohoi/acme-dns">https://github.com/joohoi/acme-dns</a>&gt;</span>. </dd>
+<span class="refAuthor">Hoikkala, J.</span>, <span class="refTitle">"acme-dns"</span>, <span>n.d.</span>, <span>&lt;<a href="https://github.com/joohoi/acme-dns">https://github.com/joohoi/acme-dns</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="AKAMAI-DCV">[AKAMAI-DCV]</dt>
         <dd>
@@ -1579,7 +1579,7 @@ _acme-challenge.domainiwantcertfor.tld. IN  CNAME a097455b-52cc-4569-90c8-7a4b97
 <dd class="break"></dd>
 <dt id="ATPROTO-HANDLE">[ATPROTO-HANDLE]</dt>
         <dd>
-<span class="refAuthor">Bluesky</span>, <span class="refTitle">"Handle Resolution: DNS TXT Method"</span>, <span>n.d.</span>, <span>&lt;<a href="https://atproto.com/specs/handle#dns-txt-method">https://atproto.com/specs/handle#dns-txt-method</a>&gt;</span>. </dd>
+<span class="refAuthor">Bluesky</span>, <span class="refTitle">"Handle"</span>, <span>n.d.</span>, <span>&lt;<a href="https://atproto.com/specs/handle#dns-txt-method">https://atproto.com/specs/handle#dns-txt-method</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="CERTIFY-DNS">[CERTIFY-DNS]</dt>
         <dd>
@@ -1611,15 +1611,15 @@ _acme-challenge.domainiwantcertfor.tld. IN  CNAME a097455b-52cc-4569-90c8-7a4b97
 <dd class="break"></dd>
 <dt id="GOOGLE-CERT-MANAGER">[GOOGLE-CERT-MANAGER]</dt>
         <dd>
-<span class="refAuthor">Google</span>, <span class="refTitle">"Deploy a Google-managed certificate with DNS authorization"</span>, <span>n.d.</span>, <span>&lt;<a href="https://cloud.google.com/certificate-manager/docs/deploy-google-managed-dns-auth">https://cloud.google.com/certificate-manager/docs/deploy-google-managed-dns-auth</a>&gt;</span>. </dd>
+<span class="refAuthor">Google</span>, <span class="refTitle">"Deploy a global Google-managed certificate with DNS authorization"</span>, <span>n.d.</span>, <span>&lt;<a href="https://cloud.google.com/certificate-manager/docs/deploy-google-managed-dns-auth">https://cloud.google.com/certificate-manager/docs/deploy-google-managed-dns-auth</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="GOOGLE-WORKSPACE-CNAME">[GOOGLE-WORKSPACE-CNAME]</dt>
         <dd>
-<span class="refAuthor">Google</span>, <span class="refTitle">"Verify your domain with a CNAME record"</span>, <span>n.d.</span>, <span>&lt;<a href="https://support.google.com/a/answer/112038">https://support.google.com/a/answer/112038</a>&gt;</span>. </dd>
+<span class="refAuthor">Google</span>, <span class="refTitle">"CNAME record values"</span>, <span>n.d.</span>, <span>&lt;<a href="https://support.google.com/a/answer/112038">https://support.google.com/a/answer/112038</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="GOOGLE-WORKSPACE-TXT">[GOOGLE-WORKSPACE-TXT]</dt>
         <dd>
-<span class="refAuthor">Google</span>, <span class="refTitle">"Verify your domain with a TXT record"</span>, <span>n.d.</span>, <span>&lt;<a href="https://support.google.com/a/answer/2716802">https://support.google.com/a/answer/2716802</a>&gt;</span>. </dd>
+<span class="refAuthor">Google</span>, <span class="refTitle">"TXT record values"</span>, <span>n.d.</span>, <span>&lt;<a href="https://support.google.com/a/answer/2716802">https://support.google.com/a/answer/2716802</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.draft-ietf-dnsop-domain-verification-techniques">[I-D.draft-ietf-dnsop-domain-verification-techniques]</dt>
         <dd>
@@ -1631,7 +1631,7 @@ _acme-challenge.domainiwantcertfor.tld. IN  CNAME a097455b-52cc-4569-90c8-7a4b97
 <dd class="break"></dd>
 <dt id="LETSENCRYPT-DNS01">[LETSENCRYPT-DNS01]</dt>
         <dd>
-<span class="refAuthor">Internet Security Research Group (ISRG)</span>, <span class="refTitle">"Challenge Types: DNS-01 challenge"</span>, <span>n.d.</span>, <span>&lt;<a href="https://letsencrypt.org/docs/challenge-types/#dns-01-challenge">https://letsencrypt.org/docs/challenge-types/#dns-01-challenge</a>&gt;</span>. </dd>
+<span class="refAuthor">Internet Security Research Group (ISRG)</span>, <span class="refTitle">"Challenge Types"</span>, <span>n.d.</span>, <span>&lt;<a href="https://letsencrypt.org/docs/challenge-types/#dns-01-challenge">https://letsencrypt.org/docs/challenge-types/#dns-01-challenge</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="PSL">[PSL]</dt>
         <dd>
