@@ -10,7 +10,7 @@ Expires: 7 January 2027                                       Salesforce
 
 
        A Survey of Domain Control Validation Techniques using DNS
-  draft-sahib-dnsop-survey-domain-control-validation-techniques-latest
+             draft-sahib-dnsop-survey-dcv-techniques-latest
 
 Abstract
 
@@ -24,6 +24,17 @@ Abstract
    reference companion to the best practices described in the DNS
    Operations Working Group's work on Domain Control Validation using
    DNS.
+
+Discussion Venues
+
+   This note is to be removed before publishing as an RFC.
+
+   Discussion of this document takes place on the Domain Name System
+   Operations Working Group mailing list (dnsop@ietf.org), which is
+   archived at https://mailarchive.ietf.org/arch/browse/dnsop/.
+
+   Source for this draft and an issue tracker can be found at
+   https://github.com/ShivanKaul/draft-sahib-survey-dcv-techniques.
 
 Status of This Memo
 
