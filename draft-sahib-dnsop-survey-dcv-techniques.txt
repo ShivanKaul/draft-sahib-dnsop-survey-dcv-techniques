@@ -105,9 +105,9 @@ Table of Contents
    Application Service Providers often need domain owners to prove
    control of a DNS domain before providing a service, such as a
    Certification Authority (CA) issuing a TLS certificate.  DNS-based
-   methods typically have the Application Service Provider generate a
-   Unique Token and ask the requester to publish it in a DNS record at a
-   location the provider can query.
+   methods typically ask the requester to publish one or more DNS
+   records, with content and placement specified by the Application
+   Service Provider, that the provider can then query for.
 
    This document surveys such DNS-based Domain Control Validation
    techniques in use today, cataloging the record types (primarily TXT
