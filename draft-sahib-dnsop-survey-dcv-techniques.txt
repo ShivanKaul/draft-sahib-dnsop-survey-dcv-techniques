@@ -14,16 +14,14 @@ Expires: 7 January 2027                                       Salesforce
 
 Abstract
 
-   Many application services on the Internet need to verify ownership or
-   control of a domain in the Domain Name System (DNS).  The general
-   term for this process is "Domain Control Validation", and it can be
-   done using a variety of methods such as email, HTTP/HTTPS, or the DNS
-   itself.  This document surveys DNS-based Domain Control Validation
-   techniques in use today across a range of Application Service
-   Providers and protocols.  It is intended as an informational
-   reference companion to the best practices described in the DNS
-   Operations Working Group's work on Domain Control Validation using
-   DNS.
+   [I-D.draft-ietf-dnsop-domain-verification-techniques] describes best
+   practices for using the DNS to verify ownership or control of a
+   domain, a process generally referred to as "Domain Control
+   Validation".  This document is a companion survey that catalogs the
+   DNS-based Domain Control Validation techniques in use today across a
+   range of Application Service Providers and protocols.  This material
+   was originally developed as part of that document and is published
+   separately for reference.
 
 Discussion Venues
 
@@ -121,8 +119,9 @@ Table of Contents
    way tokens are constructed and placed, drawing on the publicly
    documented behavior of a range of Application Service Providers and
    protocols.  This survey is intended as an informational companion to
-   the best practices for Domain Control Validation using DNS, and it
-   does not itself make recommendations.
+   the best practices for Domain Control Validation using DNS in
+   [I-D.draft-ietf-dnsop-domain-verification-techniques], and it does
+   not itself make recommendations.
 
 2.  Conventions and Definitions
 
@@ -355,8 +354,8 @@ _acme-challenge.domainiwantcertfor.tld. IN  CNAME a097455b-52cc-4569-90c8-7a4b97
    surveyed here have varying security properties; some of the
    operational and security considerations that apply to them, including
    the construction of tokens and the placement of Validation Records,
-   are discussed in the best practices document for Domain Control
-   Validation using DNS.
+   are discussed in
+   [I-D.draft-ietf-dnsop-domain-verification-techniques].
 
 6.  IANA Considerations
 
@@ -444,6 +443,14 @@ _acme-challenge.domainiwantcertfor.tld. IN  CNAME a097455b-52cc-4569-90c8-7a4b97
    [GOOGLE-WORKSPACE-TXT]
               Google, "Verify your domain with a TXT record", n.d.,
               <https://support.google.com/a/answer/2716802>.
+
+   [I-D.draft-ietf-dnsop-domain-verification-techniques]
+              Sahib, S. K., Huque, S., Wouters, P., Nygren, E., and T.
+              Wicinski, "Domain Control Validation using DNS", Work in
+              Progress, Internet-Draft, draft-ietf-dnsop-domain-
+              verification-techniques-13, 21 June 2026,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-
+              domain-verification-techniques-13>.
 
    [LETSENCRYPT-90DAYS]
               Aas, J., "Why ninety-day lifetimes for certificates?",
